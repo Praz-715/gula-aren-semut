@@ -11,19 +11,9 @@
         <div class="container" data-aos="fade-up" data-aos-delay="100">
             <div class="swiper init-swiper">
                 <!-- Swiper Slides -->
-                <!-- <div class="swiper-wrapper"> -->
+                <div class="swiper-wrapper">
 
-                <Swiper :loop="true" :modules="modules" :slides-per-view="3" :space-between="50" navigation
-                    :pagination="{ clickable: true }" @swiper="onSwiper" @slideChange="onSlideChange"
-                    :class="swiper - wrapper">
-                    <!-- <SwiperSlide :class="swiper-slide">Slide 1</SwiperSlide>
-                        <SwiperSlide :class="swiper-slide">Slide 2</SwiperSlide>
-                        <SwiperSlide :class="swiper-slide">Slide 3</SwiperSlide> -->
-
-
-
-                    <SwiperSlide :class="swiper - slide">
-                        <!-- <div class="swiper-slide"> -->
+                    <div class="swiper-slide">
                         <div class="testimonial-item">
                             <div class="stars">
                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
@@ -31,10 +21,8 @@
                                     class="bi bi-star-fill"></i>
                             </div>
                             <p>
-                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum
-                                suscipit
-                                rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen
-                                aliquam,
+                                Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit
+                                rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam,
                                 risus at semper.
                             </p>
                             <div class="profile mt-auto">
@@ -43,11 +31,9 @@
                                 <h4>Ceo &amp; Founder</h4>
                             </div>
                         </div>
-                        <!-- </div> -->
-                    </SwiperSlide><!-- End testimonial item -->
+                    </div><!-- End testimonial item -->
 
-                    <SwiperSlide :class="swiper - slide">
-                        <!-- <div class="swiper-slide"> -->
+                    <div class="swiper-slide">
                         <div class="testimonial-item">
                             <div class="stars">
                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
@@ -55,10 +41,8 @@
                                     class="bi bi-star-fill"></i>
                             </div>
                             <p>
-                                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum
-                                quid
-                                cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure
-                                amet
+                                Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid
+                                cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet
                                 legam anim culpa.
                             </p>
                             <div class="profile mt-auto">
@@ -67,11 +51,9 @@
                                 <h4>Designer</h4>
                             </div>
                         </div>
-                        <!-- </div> -->
-                    </SwiperSlide><!-- End testimonial item -->
+                    </div><!-- End testimonial item -->
 
-                    <SwiperSlide :class="swiper - slide">
-                        <!-- <div class="swiper-slide"> -->
+                    <div class="swiper-slide">
                         <div class="testimonial-item">
                             <div class="stars">
                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
@@ -79,10 +61,8 @@
                                     class="bi bi-star-fill"></i>
                             </div>
                             <p>
-                                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem
-                                veniam
-                                duis minim tempor labore quem eram duis noster aute amet eram fore quis sint
-                                minim.
+                                Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam
+                                duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
                             </p>
                             <div class="profile mt-auto">
                                 <img src="/assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
@@ -90,11 +70,9 @@
                                 <h4>Store Owner</h4>
                             </div>
                         </div>
-                        <!-- </div> -->
-                    </SwiperSlide><!-- End testimonial item -->
+                    </div><!-- End testimonial item -->
 
-                    <SwiperSlide :class="swiper - slide">
-                        <!-- <div class="swiper-slide"> -->
+                    <div class="swiper-slide">
                         <div class="testimonial-item">
                             <div class="stars">
                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
@@ -102,10 +80,8 @@
                                     class="bi bi-star-fill"></i>
                             </div>
                             <p>
-                                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim
-                                fugiat
-                                minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem
-                                dolore
+                                Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat
+                                minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore
                                 labore illum veniam.
                             </p>
                             <div class="profile mt-auto">
@@ -114,11 +90,9 @@
                                 <h4>Freelancer</h4>
                             </div>
                         </div>
-                        <!-- </div> -->
-                    </SwiperSlide><!-- End testimonial item -->
+                    </div><!-- End testimonial item -->
 
-                    <SwiperSlide :class="swiper - slide">
-                        <!-- <div class="swiper-slide"> -->
+                    <div class="swiper-slide">
                         <div class="testimonial-item">
                             <div class="stars">
                                 <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
@@ -126,10 +100,8 @@
                                     class="bi bi-star-fill"></i>
                             </div>
                             <p>
-                                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor
-                                noster
-                                veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse
-                                veniam
+                                Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster
+                                veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam
                                 culpa fore nisi cillum quid.
                             </p>
                             <div class="profile mt-auto">
@@ -138,24 +110,17 @@
                                 <h4>Entrepreneur</h4>
                             </div>
                         </div>
-                        <!-- </div> -->
-                    </SwiperSlide><!-- End testimonial item -->
-                </Swiper>
-                <!-- </div> -->
-                <!-- <div id="swiper-pagination"></div> -->
+                    </div><!-- End testimonial item -->
+
+                </div>
+                <div id="swiper-pagination"></div>
             </div>
         </div>
     </section>
 </template>
 
 <script>
-// import Swiper core and required modules
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
-
-// Import Swiper Vue.js components
-import { Swiper, SwiperSlide } from 'swiper/vue';
-
-// Import Swiper styles
+import Swiper from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -163,59 +128,41 @@ import 'swiper/css/scrollbar';
 
 export default {
     name: 'Testimonials',
-    components: {
-        Swiper,
-        SwiperSlide,
+    mounted() {
+        // Swiper configuration
+        const config = {
+            loop: true,
+            speed: 600,
+            autoplay: {
+                delay: 5000,
+            },
+            slidesPerView: 'auto',
+            pagination: {
+                el: '#swiper-pagination',
+                type: 'bullets',
+                clickable: true,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 40,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 1,
+                },
+            },
+        };
+
+        // Initialize Swiper instance
+        const initSwiper = () => {
+            document.querySelectorAll('.init-swiper').forEach((swiperElement) => {
+                new Swiper(swiperElement, config);
+            });
+        };
+
+        window.addEventListener('load', initSwiper);
     },
-    setup() {
-        const onSwiper = (swiper) => {
-            console.log(swiper);
-        };
-        const onSlideChange = () => {
-            console.log('slide change');
-        };
-        return {
-            onSwiper,
-            onSlideChange,
-            modules: [Navigation, Pagination, Scrollbar, A11y],
-        };
-    },
-
-    // mounted() {
-    //     // Swiper configuration
-    //     const config = {
-    //         loop: true,
-    //         speed: 600,
-    //         autoplay: {
-    //             delay: 5000,
-    //         },
-    //         slidesPerView: 'auto',
-    //         pagination: {
-    //             el: '#swiper-pagination',
-    //             type: 'bullets',
-    //             clickable: true,
-    //         },
-    //         breakpoints: {
-    //             320: {
-    //                 slidesPerView: 1,
-    //                 spaceBetween: 40,
-    //             },
-    //             1200: {
-    //                 slidesPerView: 3,
-    //                 spaceBetween: 1,
-    //             },
-    //         },
-    //     };
-
-    //     // Initialize Swiper instance
-    //     const initSwiper = () => {
-    //         document.querySelectorAll('.init-swiper').forEach((swiperElement) => {
-    //             new Swiper(swiperElement, config);
-    //         });
-    //     };
-
-    //     window.addEventListener('load', initSwiper);
-    // },
 };
 </script>
 

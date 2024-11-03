@@ -14,10 +14,16 @@
             <MoreFeatures />
             <Pricing />
             <FAQ />
-            <!-- <Testimonials /> -->
+            <Testimonials />
             <Contact />
         </main>
         <Footer />
+        <!-- Scroll Top -->
+        <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+                class="bi bi-arrow-up-short"></i></a>
+
+        <!-- Preloader -->
+        <div id="preloader"></div>
     </div>
 </template>
 
@@ -34,9 +40,11 @@ import Services from "@/components/Services.vue";
 import MoreFeatures from "@/components/MoreFeatures.vue";
 import Pricing from "@/components/Pricing.vue";
 import FAQ from "@/components/FAQ.vue";
-// import Testimonials from "@/components/Testimonials.vue";
+import Testimonials from "@/components/Testimonials.vue";
 import Contact from "@/components/Contact.vue";
 import Footer from "@/components/Footer.vue";
+
+import AOS from 'aos';
 
 
 export default {
@@ -53,13 +61,20 @@ export default {
         MoreFeatures,
         Pricing,
         FAQ,
-        // Testimonials,
+        Testimonials,
         Contact,
         Footer,
     },
 
     mounted() {
         document.body.classList.add('index-page');
+
+        const preloader = document.querySelector('#preloader');
+        if (preloader) {
+            window.addEventListener('load', () => {
+                preloader.remove();
+            });
+        }
         /**
          * Toggle Scrolled Class on Body
          */
@@ -100,18 +115,18 @@ export default {
             mirror: false,
         });
 
-        /**
-         * Init Swiper
-         */
-        const initSwiper = () => {
-            document.querySelectorAll(".init-swiper").forEach((swiperElement) => {
-                let config = JSON.parse(
-                    swiperElement.querySelector(".swiper-config").innerHTML.trim()
-                );
-                new Swiper(swiperElement, config);
-            });
-        };
-        window.addEventListener("load", initSwiper);
+        // /**
+        //  * Init Swiper
+        //  */
+        // const initSwiper = () => {
+        //     document.querySelectorAll(".init-swiper").forEach((swiperElement) => {
+        //         let config = JSON.parse(
+        //             swiperElement.querySelector(".swiper-config").innerHTML.trim()
+        //         );
+        //         new Swiper(swiperElement, config);
+        //     });
+        // };
+        // window.addEventListener("load", initSwiper);
 
         /**
          * Frequently Asked Questions Toggle
