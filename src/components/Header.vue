@@ -4,50 +4,37 @@
         <div class="container-fluid container-xl position-relative d-flex align-items-center">
             <a href="/" class="logo d-flex align-items-center me-auto">
                 <img src="/assets/img/logo.png" alt="">
-                <h1 class="sitename">QuickStart</h1>
+                <h1 class="sitename">From Nature Future</h1>
             </a>
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="#hero" class="active">{{ translations[locale].home }}</a></li>
-                    <li><a href="#about">{{ translations[locale].about }}</a></li>
-                    <li><a href="#features">{{ translations[locale].features }}</a></li>
-                    <li><a href="#services">{{ translations[locale].services }}</a></li>
-                    <li><a href="#pricing">{{ translations[locale].pricing }}</a></li>
+                    <li><a href="#hero" class="active">{{ translations.header[locale].home }}</a></li>
+                    <li><a href="#about">{{ translations.header[locale].about }}</a></li>
+                    <li><a href="#features">{{ translations.header[locale].features }}</a></li>
+                    <li><a href="#services">{{ translations.header[locale].services }}</a></li>
+                    <li><a href="#pricing">{{ translations.header[locale].pricing }}</a></li>
                     <li class="dropdown">
-                        <a href="#"><span>{{ translations[locale].dropdown }}</span> <i
+                        <a href="#"><span>{{ translations.header[locale].dropdown }}</span> <i
                                 class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
-                            <li><a href="#">{{ translations[locale].dropdown1 }}</a></li>
+                            <li><a href="#">{{ translations.header[locale].dropdown1 }}</a></li>
                         </ul>
                     </li>
-                    <li><a href="#contact">{{ translations[locale].contact }}</a></li>
+                    <li><a href="#contact">{{ translations.header[locale].contact }}</a></li>
+                    <!-- Tambahkan Toggle Switch Bahasa -->
+                    <div class="language-toggle ms-3">
+                        <label class="switch">
+                            <input type="checkbox" @click="toggleLanguage" v-model="isEnglish">
+                            <span class="slider round"></span>
+                        </label>
+                        <span class="language-label">{{ isEnglish ? 'EN' : 'ID' }}</span>
+                    </div>
                 </ul>
-                <!-- <ul>
-                    <li><a href="#hero" class="active">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
-                    <li class="dropdown">
-                        <a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                        <ul>
-                            <li><a href="#">Dropdown 1</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul> -->
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
-            <!-- Tambahkan Toggle Switch Bahasa -->
-            <div class="language-toggle ms-3">
-                <label class="switch">
-                    <input type="checkbox" @click="toggleLanguage" v-model="isEnglish">
-                    <span class="slider round"></span>
-                </label>
-                <span class="language-label">{{ isEnglish ? 'EN' : 'ID' }}</span>
-            </div>
+
 
             <a class="btn-getstarted" href="#about">Get Started</a>
         </div>
@@ -122,7 +109,8 @@ export default {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
+    background-color: var(--default-color);
+    /* Ganti dengan warna default */
     transition: 0.4s;
     border-radius: 20px;
 }
@@ -134,13 +122,15 @@ export default {
     width: 16px;
     left: 2px;
     bottom: 2px;
-    background-color: white;
+    background-color: var(--contrast-color);
+    /* Ganti dengan warna kontras */
     transition: 0.4s;
     border-radius: 50%;
 }
 
 input:checked+.slider {
-    background-color: #2196F3;
+    background-color: var(--nav-hover-color);
+    /* Ganti dengan warna hover nav */
 }
 
 input:checked+.slider:before {
@@ -158,5 +148,7 @@ input:checked+.slider:before {
 .language-label {
     font-size: 14px;
     font-weight: bold;
+    color: var(--nav-color);
+    /* Ganti dengan warna nav */
 }
 </style>

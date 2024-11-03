@@ -6,13 +6,13 @@
       </div>
       <div class="container text-center">
         <div class="d-flex flex-column justify-content-center align-items-center">
-          <h1>Welcome to <span>QuickStart</span></h1>
-          <p>Quickly start your project now and set the stage for success</p>
+          <h1>Coconut Palm Sugar <span>Crystals</span></h1>
+          <p>The finest natural quality in every grain of palm sugar</p>
           <div class="d-flex">
             <a href="#about" class="btn-get-started">Get Started</a>
-            <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video">
+            <!-- <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox btn-watch-video">
               <i class="bi bi-play-circle"></i><span>Watch Video</span>
-            </a>
+            </a> -->
           </div>
           <img src="/assets/img/hero-services-img.webp" class="img-fluid hero-img" alt="">
         </div>

@@ -36,29 +36,6 @@
   --nav-dropdown-hover-color: #8b5a2b; /* Coklat Aksen */
 }
 
-/* Gantilah semua warna lain dalam CSS dengan warna yang sesuai */
-body { 
-  color: var(--default-color); 
-  background-color: var(--background-color); 
-  font-family: var(--default-font); 
-} 
-
-a { 
-  color: var(--accent-color); 
-  text-decoration: none; 
-  transition: 0.3s; 
-} 
-
-a:hover { 
-  color: color-mix(in srgb, var(--accent-color), transparent 25%); 
-  text-decoration: none; 
-} 
-
-h1, h2, h3, h4, h5, h6 { 
-  color: var(--heading-color); 
-  font-family: var(--heading-font); 
-} 
-
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
@@ -82,32 +59,28 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
-/* body {
-  color: var(--default-color);
-  background-color: var(--background-color);
-  font-family: var(--default-font);
-}
+body { 
+  color: var(--default-color); 
+  background-color: var(--background-color); 
+  font-family: var(--default-font); 
+} 
 
-a {
-  color: var(--accent-color);
-  text-decoration: none;
-  transition: 0.3s;
-}
+a { 
+  color: var(--accent-color); 
+  text-decoration: none; 
+  transition: 0.3s; 
+} 
 
-a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
-  text-decoration: none;
-}
+a:hover { 
+  color: color-mix(in srgb, var(--accent-color), transparent 25%); 
+  text-decoration: none; 
+} 
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--heading-color);
-  font-family: var(--heading-font);
-} */
+h1, h2, h3, h4, h5, h6 { 
+  color: var(--heading-color); 
+  font-family: var(--heading-font); 
+} 
+
 
 /* PHP Email Form Messages
 ------------------------------*/
@@ -194,17 +167,7 @@ h6 {
   }
 
   .header .logo h1 {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .header .logo img {
-    max-height: 24px;
-  }
-
-  .header .logo h1 {
-    font-size: 18px;
+    font-size: 24px;
   }
 }
 
@@ -938,7 +901,6 @@ section,
   }
 }
 
-
 .hero .btn-get-started {
   color: var(--contrast-color);
   background: var(--accent-color);
@@ -990,7 +952,7 @@ section,
   }
 
   .hero p {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 24px;
     margin-bottom: 30px;
   }
@@ -1001,7 +963,63 @@ section,
   }
 }
 
+/*--------------------------------------------------------------
+# Featured Services Section
+--------------------------------------------------------------*/
+.featured-services {
+  padding: 40px 0;
+}
 
+.featured-services .service-item {
+  position: relative;
+  padding-top: 20px;
+}
+
+.featured-services .service-item .icon {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 80%);
+  width: 72px;
+  height: 72px;
+  position: relative;
+  margin-right: 15px;
+  line-height: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in-out 0.3s;
+}
+
+.featured-services .service-item .icon i {
+  color: var(--accent-color);
+  font-size: 32px;
+  z-index: 2;
+  position: relative;
+}
+
+.featured-services .service-item .title {
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.featured-services .service-item .title a {
+  color: var(--heading-color);
+}
+
+.featured-services .service-item .title a:hover {
+  color: var(--accent-color);
+}
+
+.featured-services .service-item .description {
+  font-size: 14px;
+}
+
+.featured-services .service-item:hover .icon {
+  background-color: var(--accent-color);
+}
+
+.featured-services .service-item:hover .icon i {
+  color: var(--contrast-color);
+}
 
 /*--------------------------------------------------------------
 # About Section
