@@ -2,6 +2,7 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 import AOS from 'aos';
+import store from './store';
 // src/main.js
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
@@ -16,6 +17,8 @@ import 'glightbox/dist/css/glightbox.min.css';
 import './style.css'
 
 const app = createApp(App);
+
+app.use(store); 
 
 app.use({
   install() {
