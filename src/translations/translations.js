@@ -10,6 +10,7 @@ export const translations = {
       dropdown: "Dropdown",
       dropdown1: "Dropdown 1",
       contact: "Contact",
+      btn: "Get Started"
     },
     id: {
       home: "Beranda",
@@ -20,7 +21,22 @@ export const translations = {
       dropdown: "Dropdown",
       dropdown1: "Dropdown 1",
       contact: "Kontak",
+      btn: "Ayo Mulai"
     },
+  },
+  hero: {
+    en: {
+      h1: "Coconut Palm Sugar",
+      span: "Crystals",
+      par: "The finest natural quality in every grain of palm sugar",
+      btn: "Get Started"
+    },
+    id: {
+      h1: "Gula Aren Semut",
+      span: "Kristal",
+      par: "Kualitas alami terbaik dalam setiap butir gula aren",
+      btn: "Ayo Mulai"
+    }
   },
   about: {
     en: {

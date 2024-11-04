@@ -23,12 +23,24 @@
                     </li>
                     <li><a href="#contact">{{ translations.header[locale].contact }}</a></li>
                     <!-- Tambahkan Toggle Switch Bahasa -->
+                    <!-- <div class="language-toggle ms-3">
+                        <button  @click="setLanguage('en')">
+                            <span class="fi fi-gb"></span> EN
+                        </button>
+                        <button @click="setLanguage('id')">
+                            <span class="fi fi-id"></span> ID
+                        </button>
+                    </div> -->
                     <div class="language-toggle ms-3">
                         <label class="switch">
                             <input type="checkbox" @click="toggleLanguage" v-model="isEnglish">
                             <span class="slider round"></span>
                         </label>
-                        <span class="language-label">{{ isEnglish ? 'EN' : 'ID' }}</span>
+                        <span class="language-label">
+                            <span v-if="isEnglish" class="fi fi-gb"></span> <!-- Ikon Bendera Inggris -->
+                            <span v-else class="fi fi-id fis"></span> <!-- Ikon Bendera Indonesia -->
+                        </span>
+                        <!-- <span class="language-label">{{ isEnglish ? 'EN' : 'ID' }}</span> -->
                     </div>
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -44,6 +56,7 @@
 <script>
 import { mapState, mapActions } from 'vuex';
 import { translations } from '@/translations/translations.js';
+import "flag-icons/css/flag-icons.min.css";
 
 export default {
     name: "Header",
@@ -82,6 +95,13 @@ export default {
 </script>
 
 <style scoped>
+.language-label {
+    font-size: 20px;
+    /* Atur ukuran ikon sesuai kebutuhan */
+    margin-left: 5px;
+    /* Memberikan jarak antara ikon dan toggle switch */
+}
+
 /* Scoped CSS untuk Toggle Switch */
 .language-toggle {
     display: flex;
