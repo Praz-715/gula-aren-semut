@@ -7,13 +7,13 @@
             <HeroSection />
             <FeaturedServices />
             <About />
-            <Clients />
+            <!-- <Clients />
             <Features />
             <FeaturesDetails />
             <Services />
             <MoreFeatures />
             <Pricing />
-            <FAQ />
+            <FAQ /> -->
             <Testimonials />
             <Contact />
         </main>
