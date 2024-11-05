@@ -19,6 +19,7 @@
     "isotope-layout": "^3.0.6",
     "swiper": "^11.1.14",
     "vue": "^3.5.12",
+    "vue-waypoint": "^4.3.0",
     "vuex": "^4.1.0"
   },
   "devDependencies": {
