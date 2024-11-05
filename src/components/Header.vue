@@ -22,26 +22,36 @@
                         </ul>
                     </li>
                     <li><a href="#contact">{{ translations.header[locale].contact }}</a></li>
-                    <!-- Tambahkan Toggle Switch Bahasa -->
+
+
+                    <li class="d-flex">
+                        <ul class="nav nav-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link" :class="{ active: isEnglish }" @click="setLanguage(true)"
+                                    style="padding: 10px 15px;">
+                                    <span class="fi fi-gb border"></span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" :class="{ active: !isEnglish }" @click="setLanguage(false)"
+                                    style="padding: 10px 15px;">
+                                    <span class="fi fi-id border"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
                     <!-- <div class="language-toggle ms-3">
-                        <button  @click="setLanguage('en')">
-                            <span class="fi fi-gb"></span> EN
-                        </button>
-                        <button @click="setLanguage('id')">
-                            <span class="fi fi-id"></span> ID
-                        </button>
-                    </div> -->
-                    <div class="language-toggle ms-3">
                         <label class="switch">
                             <input type="checkbox" @click="toggleLanguage" v-model="isEnglish">
                             <span class="slider round"></span>
                         </label>
                         <span class="language-label">
-                            <span v-if="isEnglish" class="fi fi-gb"></span> <!-- Ikon Bendera Inggris -->
-                            <span v-else class="fi fi-id fis"></span> <!-- Ikon Bendera Indonesia -->
+                            <span v-if="isEnglish" class="fi fi-gb"></span>
+                            <span v-else class="fi fi-id fis"></span> 
                         </span>
-                        <!-- <span class="language-label">{{ isEnglish ? 'EN' : 'ID' }}</span> -->
-                    </div>
+                        <span class="language-label">{{ isEnglish ? 'EN' : 'ID' }}</span>
+                    </div> -->
                 </ul>
                 <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
@@ -64,6 +74,7 @@ export default {
         return {
             translations,
             isEnglish: true, // Default ke bahasa Inggris
+            locale: 'en'
         };
     },
     computed: {
@@ -73,12 +84,31 @@ export default {
     },
     methods: {
         ...mapActions(['changeLocale']),
-        toggleLanguage() {
-            const newLocale = this.locale === 'en' ? 'id' : 'en'; // Menentukan locale baru
+        setLanguage(isEng) {
+            this.isEnglish = isEng;
+            const newLocale =  this.isEnglish ? 'en' : 'id'; // Menentukan locale baru
+            this.locale = newLocale;
             this.changeLocale(newLocale); // Memanggil aksi untuk mengubah locale
             console.log(`Berpindah ke Bahasa ${newLocale === 'en' ? 'Inggris' : 'Indonesia'}`);
         },
-    },
+        // changeLocale(locale) {
+        //     this.locale = locale;
+        //     console.log("this locale", this.locale)
+        //     // Tambahkan logika lain jika diperlukan, seperti menyimpan pilihan locale
+        // }
+    }
+    // methods: {
+    //     ...mapActions(['changeLocale']),
+    //     setLanguage(isEng) {
+    //         this.isEnglish = isEng;
+    //         // Tambahkan logika lain jika diperlukan, seperti menyimpan pilihan bahasa
+    //     },
+    //     toggleLanguage() {
+    //         const newLocale = this.locale === 'en' ? 'id' : 'en'; // Menentukan locale baru
+    //         this.changeLocale(newLocale); // Memanggil aksi untuk mengubah locale
+    //         console.log(`Berpindah ke Bahasa ${newLocale === 'en' ? 'Inggris' : 'Indonesia'}`);
+    //     },
+    // },
     // methods: {
     //     toggleLanguage() {
     //         this.isEnglish = !this.isEnglish;
@@ -95,6 +125,28 @@ export default {
 </script>
 
 <style scoped>
+@media (max-width: 768px) {
+    .nav-tabs {
+        position: relative;
+        /* z-index: 1; */
+        display: flex;
+        justify-content: center;
+        /* Pastikan elemen berada di tengah */
+        padding: 10px 0;
+        /* Tambahkan padding jika perlu */
+    }
+
+    .nav-item {
+        margin: 0 5px;
+        /* Jarak antar item */
+    }
+
+    .nav-link {
+        padding: 10px 15px;
+        /* Pastikan padding konsisten */
+    }
+}
+
 .language-label {
     font-size: 20px;
     /* Atur ukuran ikon sesuai kebutuhan */
