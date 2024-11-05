@@ -3,14 +3,8 @@
     <div class="container">
       <div class="row">
         <div class="col" v-for="(service, index) in services" :key="index">
-          <div v-if="service.title != 'Halal'" class="service-item d-flex flex-column align-items-center">
-            <div class="icon flex-shrink-0">
-              <i :class="service.icon"></i>
-            </div>
-            <h4 class="text-center mt-2"><a class="stretched-link">{{ service.title }}</a></h4>
-          </div>
-          <div v-else class="service-item d-flex flex-column align-items-center" @mouseover="showHaqiqi"
-            @mouseout="hideHaqiqi">
+          <div v-if="service.title === 'Halal'" class="service-item d-flex flex-column align-items-center"
+            @mouseover="showHaqiqi" @mouseout="hideHaqiqi">
             <div class="icon flex-shrink-0">
               <i class="img-container">
                 <img src="/assets/img/halalan-toyiban.png" class="toyiban" alt="">
@@ -19,6 +13,23 @@
             </div>
             <h4 class="text-center mt-2"><a class="stretched-link">{{ service.title }}</a></h4>
           </div>
+          <div v-else-if="service.title === '100% Oraganik'" class="service-item d-flex flex-column align-items-center"
+            @mouseover="showNature" @mouseout="hideNature">
+            <div class="icon flex-shrink-0">
+              <i class="img-container">
+                <img src="/assets/img/nature.png" class="naturekampret" alt="">
+                <img src="/assets/img/nature-2.png" class="naturekampret-white" alt="">
+              </i>
+            </div>
+            <h4 class="text-center mt-2"><a class="stretched-link">{{ service.title }}</a></h4>
+          </div>
+          <div v-else class="service-item d-flex flex-column align-items-center">
+            <div class="icon flex-shrink-0">
+              <i :class="service.icon"></i>
+            </div>
+            <h4 class="text-center mt-2"><a class="stretched-link">{{ service.title }}</a></h4>
+          </div>
+
         </div>
       </div>
     </div>
@@ -34,6 +45,7 @@ export default {
         { icon: "bi bi-stars", title: "Hygiene" },
         { icon: "bi bi-card-checklist", title: "Halal" },
         { icon: "bi bi-shield-check", title: "High Quality" },
+        { icon: "bi bi-shield-check", title: "100% Oraganik" },
       ],
     };
   },
@@ -51,6 +63,21 @@ export default {
       const haqiqiImg = element.querySelector('.haqiqi');
       toyibanImg.style.display = 'block'; // Tampilkan gambar toyiban
       haqiqiImg.style.display = 'none'; // Sembunyikan gambar haqiqi
+    },
+    showNature(event) {
+      const element = event.currentTarget; // Ambil elemen yang memicu event
+      const natureBlackImg = element.querySelector('.naturekampret');
+      const natureWhiteImg = element.querySelector('.naturekampret-white');
+      natureBlackImg.style.display = 'none'; // Sembunyikan gambar toyiban
+      natureWhiteImg.style.display = 'block'; // Tampilkan gambar natureWhiteImg  
+    },
+
+    hideNature(event) {
+      const element = event.currentTarget; // Ambil elemen yang memicu event
+      const natureBlackImg = element.querySelector('.naturekampret');
+      const natureWhiteImg = element.querySelector('.naturekampret-white');
+      natureBlackImg.style.display = 'block'; // Tampilkan gambar toyiban
+      natureWhiteImg.style.display = 'none'; // Sembunyikan gambar natureWhiteImg  
     }
   }
 
@@ -75,6 +102,11 @@ export default {
 }
 
 .haqiqi {
+  display: none;
+  /* Sembunyikan gambar haqiqi pada awalnya */
+}
+
+.naturekampret-white {
   display: none;
   /* Sembunyikan gambar haqiqi pada awalnya */
 }

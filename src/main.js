@@ -10,6 +10,8 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import 'aos/dist/aos.css';
 
 import 'glightbox/dist/css/glightbox.min.css';
+
+
 // src/views/Home.vue
 // import 'swiper/css';
 // import 'swiper/css/navigation';

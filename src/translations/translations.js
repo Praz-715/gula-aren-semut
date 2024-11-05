@@ -4,8 +4,8 @@ export const translations = {
     en: {
       home: "Home",
       about: "About",
-      features: "Features",
-      services: "Services",
+      features: "Product",
+      services: "Gallery",
       pricing: "Pricing",
       dropdown: "Dropdown",
       dropdown1: "Dropdown 1",
@@ -15,8 +15,8 @@ export const translations = {
     id: {
       home: "Beranda",
       about: "Tentang",
-      features: "Fitur",
-      services: "Layanan",
+      features: "Produk",
+      services: "Album Gambar",
       pricing: "Harga",
       dropdown: "Dropdown",
       dropdown1: "Dropdown 1",

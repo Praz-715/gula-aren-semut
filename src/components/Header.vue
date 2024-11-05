@@ -12,15 +12,15 @@
                     <li><a href="#hero" class="active">{{ translations.header[locale].home }}</a></li>
                     <li><a href="#about">{{ translations.header[locale].about }}</a></li>
                     <li><a href="#features">{{ translations.header[locale].features }}</a></li>
-                    <li><a href="#services">{{ translations.header[locale].services }}</a></li>
-                    <li><a href="#pricing">{{ translations.header[locale].pricing }}</a></li>
+                    <li><a href="#gallery">{{ translations.header[locale].services }}</a></li>
+                    <!-- <li><a href="#pricing">{{ translations.header[locale].pricing }}</a></li>
                     <li class="dropdown">
                         <a href="#"><span>{{ translations.header[locale].dropdown }}</span> <i
                                 class="bi bi-chevron-down toggle-dropdown"></i></a>
                         <ul>
                             <li><a href="#">{{ translations.header[locale].dropdown1 }}</a></li>
                         </ul>
-                    </li>
+                    </li> -->
                     <li><a href="#contact">{{ translations.header[locale].contact }}</a></li>
 
 

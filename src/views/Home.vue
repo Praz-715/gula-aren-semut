@@ -7,13 +7,13 @@
             <HeroSection />
             <FeaturedServices />
             <About />
-            <!-- <Clients />
+            <!-- <Clients /> -->
             <Features />
-            <FeaturesDetails />
-            <Services />
+            <!-- <FeaturesDetails /> -->
+            <Gallery />
             <MoreFeatures />
             <Pricing />
-            <FAQ /> -->
+            <FAQ />
             <Testimonials />
             <Contact />
         </main>
@@ -36,7 +36,7 @@ import About from "@/components/About.vue";
 import Clients from "@/components/Clients.vue";
 import Features from "@/components/Features.vue";
 import FeaturesDetails from "@/components/FeaturesDetails.vue";
-import Services from "@/components/Services.vue";
+import Gallery from "@/components/Gallery.vue";
 import MoreFeatures from "@/components/MoreFeatures.vue";
 import Pricing from "@/components/Pricing.vue";
 import FAQ from "@/components/FAQ.vue";
@@ -57,7 +57,7 @@ export default {
         Clients,
         Features,
         FeaturesDetails,
-        Services,
+        Gallery,
         MoreFeatures,
         Pricing,
         FAQ,
