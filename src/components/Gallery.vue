@@ -146,9 +146,12 @@
 </template>
 
 <script>
-import '@/assets/vendor/purecounter/purecounter_vanilla.js';
-import '@/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js';
-import '@/assets/vendor/isotope-layout/isotope.pkgd.min.js';
+// import '../assets/vendor/purecounter/purecounter_vanilla.js';
+// import '../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js';
+import imagesLoaded from  'imagesloaded';
+import Isotope  from 'isotope-layout'
+
+// import '../assets/vendor/isotope-layout/isotope.pkgd.min.js';
 export default {
 
   name: 'Services',
