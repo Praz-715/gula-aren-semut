@@ -1,3 +1,20 @@
+<script setup>
+import { ref } from 'vue';
+
+const faqItems = ref([]);
+
+const toggleFaq = (event) => {
+  const faqContainer = event.currentTarget;
+  faqContainer.classList.toggle('faq-active');
+};
+
+// Optional: If you want to manage the state of each FAQ item
+const faqStates = ref([true, false, false]);
+
+const toggleFaqWithState = (index) => {
+  faqStates.value[index] = !faqStates.value[index];
+};
+</script>
 <!-- src/components/Features.vue -->
 <template>
 
@@ -62,14 +79,13 @@
 
   </section><!-- /Why Us Section -->
 </template>
-
+<!-- 
 <script>
-import { Waypoint } from "vue-waypoint";
 export default {
   name: 'Features',
   mounted() {
     this.faqItems = document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle');
-    
+    console.log(this.faqItems);
     this.faqItems.forEach((faqItem) => {
       faqItem.addEventListener('click', this.toggleFaq);
     });
@@ -82,14 +98,16 @@ export default {
   },
   methods: {
     toggleFaq(event) {
+      console.log('FAQ item clicked!');
       const faqContainer = event.currentTarget.closest('.faq-item');
       if (faqContainer) {
+        // console.log('rubah');
         faqContainer.classList.toggle('faq-active');
       }
     }
   }
 };
-</script>
+</script> -->
 
 <style scoped>
 /*--------------------------------------------------------------
