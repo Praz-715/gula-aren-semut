@@ -3,8 +3,8 @@
     <section id="testimonials" class="testimonials section light-background">
         <!-- Section Title -->
         <div class="container section-title" data-aos="fade-up">
-            <h2>Testimonials</h2>
-            <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+            <h2>Certification</h2>
+            <!-- <p></p> -->
         </div>
         <!-- End Section Title -->
 

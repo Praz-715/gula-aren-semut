@@ -21,7 +21,7 @@ const toggleFaqWithState = (index) => {
   <!-- Why Us Section -->
   <section id="why-us" class="section why-us light-background" data-builder="section">
 
-    <div class="container-fluid">
+    <div class="container">
 
       <div class="row gy-4">
 

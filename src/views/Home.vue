@@ -11,9 +11,9 @@
             <Features />
             <!-- <FeaturesDetails /> -->
             <Gallery />
-            <MoreFeatures />
-            <Pricing />
-            <FAQ />
+            <!-- <MoreFeatures /> -->
+            <!-- <Pricing /> -->
+            <!-- <FAQ /> -->
             <Testimonials />
             <Contact />
         </main>
