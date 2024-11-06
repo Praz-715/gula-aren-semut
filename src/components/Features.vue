@@ -1,5 +1,7 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
+import { useStore } from 'vuex';
+import { translations } from '@/translations/translations.js';
 
 const faqItems = ref([]);
 
@@ -14,12 +16,21 @@ const faqStates = ref([true, false, false]);
 const toggleFaqWithState = (index) => {
   faqStates.value[index] = !faqStates.value[index];
 };
+
+// Access Vuex store
+const store = useStore();
+const locale = computed(() => store.state.locale);
+
+const data = {
+  translations,
+};
 </script>
+
 <!-- src/components/Features.vue -->
 <template>
 
   <!-- Why Us Section -->
-  <section id="why-us" class="section why-us light-background" data-builder="section">
+  <section id="poduct" class="section why-us light-background" data-builder="section">
 
     <div class="container">
 
@@ -27,41 +38,37 @@ const toggleFaqWithState = (index) => {
 
         <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
 
-          <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
-            <h3><span>Macam - macam produk </span><strong>Gula Aren</strong></h3>
-            <p>
+          <div class="content" data-aos="fade-up" data-aos-delay="100">
+            <h3><span>{{ translations.product[locale].judul1 }} </span><strong>{{ translations.product[locale].judulStrong }}</strong> {{ translations.product[locale].judulAfter }}</h3>
+            <br>
+            <!-- <p>
               3 Jenis Produk unggulan:
-            </p>
+            </p> -->
           </div>
 
-          <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="faq-container" data-aos="fade-up" data-aos-delay="200">
 
             <div class="faq-item faq-active">
 
-              <h3><span>01</span> Gula Aren Padat</h3>
+              <h3><span>01</span> {{ translations.product[locale].gula1judul }}</h3>
               <div class="faq-content">
-                <p>palm sugar blok is a versatile ingredient, used to sweeten, flavor, and add unique depth to a variety
-                  of dishes both sweet and savory. Its rich taste and natural composition make it a staple ingredient in
-                  many kitchen dishes</p>
+                <p>{{ translations.product[locale].gula1isi }}</p>
               </div>
               <i class="faq-toggle bi bi-chevron-right"></i>
             </div><!-- End Faq item-->
 
             <div class="faq-item">
-              <h3><span>02</span> Gula Aren Cair</h3>
+              <h3><span>02</span> {{ translations.product[locale].gula2judul }}</h3>
               <div class="faq-content">
-                <p>Palm sugar syrup is a versatile and flavorful ingredient that can be used in a wide variety of drinks
-                  and desserts, providing a rich, natural sweet taste</p>
+                <p>{{ translations.product[locale].gula2isi }}</p>
               </div>
               <i class="faq-toggle bi bi-chevron-right"></i>
             </div><!-- End Faq item-->
 
             <div class="faq-item">
-              <h3><span>03</span> Gula Aren Semut</h3>
+              <h3><span>03</span> {{ translations.product[locale].gula3judul }}</h3>
               <div class="faq-content">
-                <p>Palm sugar powder as a natural and flavorful sweetener. Palm sugar powder is suitable for use in
-                  various sweet and savory dishes, especially for cakes and toppings, even as a healthier substitute for
-                  sugar.</p>
+                <p>{{ translations.product[locale].gula3isi }}</p>
               </div>
               <i class="faq-toggle bi bi-chevron-right"></i>
             </div><!-- End Faq item-->
@@ -79,35 +86,6 @@ const toggleFaqWithState = (index) => {
 
   </section><!-- /Why Us Section -->
 </template>
-<!-- 
-<script>
-export default {
-  name: 'Features',
-  mounted() {
-    this.faqItems = document.querySelectorAll('.faq-item h3, .faq-item .faq-toggle');
-    console.log(this.faqItems);
-    this.faqItems.forEach((faqItem) => {
-      faqItem.addEventListener('click', this.toggleFaq);
-    });
-  },
-  beforeUnmount() {
-    // Bersihkan event listener
-    this.faqItems.forEach((faqItem) => {
-      faqItem.removeEventListener('click', this.toggleFaq);
-    });
-  },
-  methods: {
-    toggleFaq(event) {
-      console.log('FAQ item clicked!');
-      const faqContainer = event.currentTarget.closest('.faq-item');
-      if (faqContainer) {
-        // console.log('rubah');
-        faqContainer.classList.toggle('faq-active');
-      }
-    }
-  }
-};
-</script> -->
 
 <style scoped>
 /*--------------------------------------------------------------

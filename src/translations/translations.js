@@ -16,7 +16,7 @@ export const translations = {
       home: "Beranda",
       about: "Tentang",
       features: "Produk",
-      services: "Album Gambar",
+      services: "Galeri,",
       pricing: "Harga",
       dropdown: "Dropdown",
       dropdown1: "Dropdown 1",
@@ -26,16 +26,16 @@ export const translations = {
   },
   hero: {
     en: {
-      h1: "Coconut Palm Sugar",
-      span: "Crystals",
+      h1: "Natural Sweetness For the",
+      span: "Future",
       par: "The finest natural quality in every grain of palm sugar",
-      btn: "Get Started"
+      btn: "Start Journey"
     },
     id: {
-      h1: "Gula Aren Semut",
-      span: "Kristal",
+      h1: "Kemurnian Rasa Manis Untuk",
+      span: "Masa Depan",
       par: "Kualitas alami terbaik dalam setiap butir gula aren",
-      btn: "Ayo Mulai"
+      btn: "Mulai Tur"
     }
   },
   about: {
@@ -62,6 +62,61 @@ export const translations = {
           "Rasa Alami yang Lezat: Memberikan rasa manis yang alami dan khas, menjadikannya pilihan ideal untuk berbagai hidangan",
           "Mendukung Kesehatan Pencernaan: Mengandung prebiotik yang baik untuk kesehatan saluran pencernaan"
         ]
+    }
+  },
+  product: {
+    en: {
+      judul1: "Our ",
+      judulStrong: "Palm Sugar",
+      judulAfter: "Products:",
+      gula1judul: "Palm Sugar Block",
+      gula1isi: "Palm sugar block is a versatile ingredient, used to sweeten, flavor, and add unique depth to both sweet and savory dishes. Its rich taste and natural composition make it a staple in many kitchens.",
+      gula2judul: "Palm Sugar Syrup ",
+      gula2isi: "Palm sugar syrup is a versatile and flavorful ingredient that can be used in a wide variety of drinks and desserts, providing a rich, natural sweetness.",
+      gula3judul: "Palm Sugar Crystal ",
+      gula3isi: "Palm sugar crystal is a natural and flavorful sweetener, suitable for use in a variety of sweet and savory dishes, especially in cakes and toppings, and even as a healthier substitute for regular sugar.",
+    },
+    id: {
+      judul1: "Produk ",
+      judulStrong: "Gula Aren",
+      judulAfter: "Kami:",
+      gula1judul: "Gula Aren Cetak",
+      gula1isi: "Gula Aren Cetak adalah bahan serbaguna yang digunakan untuk memberikan rasa manis, menambah cita rasa, dan memperkaya keunikan berbagai hidangan, baik yang manis maupun gurih. Rasa yang kaya dan komposisinya yang alami menjadikannya bahan pokok di banyak dapur.",
+      gula2judul: "Gula Aren Cair ",
+      gula2isi: "Gula Aren Cair adalah bahan yang serbaguna dan kaya rasa, dapat digunakan dalam berbagai minuman dan hidangan penutup, memberikan rasa manis yang kaya dan alami.",
+      gula3judul: "Gula Aren Semut ",
+      gula3isi: "Gula aren semut adalah pemanis alami yang kaya rasa, cocok digunakan dalam berbagai hidangan manis dan gurih, terutama untuk kue dan topping, serta sebagai pengganti gula biasa yang lebih sehat",
+
+    }
+  },
+  gallery: {
+    en: {
+      title:"Gallery",
+      tabAll:"All",
+      tab1:"Block",
+      tab2:"Syrup",
+      tab3:"Crystal"
+    },
+    id: {
+      title:"Galeri",
+      tabAll:"Semua",
+      tab1:"Cetak",
+      tab2:"Cair",
+      tab3:"Semut"
+    }
+  },
+  contact: {
+    en: {
+      title:"Contact",
+      alamat:"Address",
+      callus:"Call Us",
+      emailus:"Email Us",
+    },
+    id: {
+      title:"Kontak",
+      alamat:"Alamat",
+      callus:"Hubungi Kami",
+      emailus:"Email",
     }
   }
 };

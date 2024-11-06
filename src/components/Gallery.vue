@@ -5,8 +5,8 @@
 
     <!-- Section Title -->
     <div class="container section-title" data-aos="fade-up">
-      <h2>Gallery</h2>
-      <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      <h2>{{ translations.gallery[locale].title }}</h2>
+      <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
     </div><!-- End Section Title -->
 
     <div class="container">
@@ -14,10 +14,10 @@
       <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
         <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-          <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-padat">Padat</li>
-          <li data-filter=".filter-cair">Cair</li>
-          <li data-filter=".filter-semut">Semut</li>
+          <li data-filter="*" class="filter-active">{{ translations.gallery[locale].tabAll }}</li>
+          <li data-filter=".filter-padat">{{ translations.gallery[locale].tab1 }}</li>
+          <li data-filter=".filter-cair">{{ translations.gallery[locale].tab2 }}</li>
+          <li data-filter=".filter-semut">{{ translations.gallery[locale].tab3 }}</li>
         </ul><!-- End Portfolio Filters -->
 
         <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
@@ -27,8 +27,8 @@
             <div class="portfolio-info">
               <h4>Padat 1</h4>
               <p>Lorem ipsum, dolor sit</p>
-              <a href="/assets/img/gallery/padat(1).jpeg" title="Padat 1"
-                data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="/assets/img/gallery/padat(1).jpeg" title="Padat 1" data-gallery="portfolio-gallery-app"
+                class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i
                   class="bi bi-link-45deg"></i></a> -->
             </div>
@@ -39,9 +39,8 @@
             <div class="portfolio-info">
               <h4>Cair 1</h4>
               <p>Lorem ipsum, dolor sit</p>
-              <a href="/assets/img/gallery/cair(1).jpeg" title="Cair 1"
-                data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                  class="bi bi-zoom-in"></i></a>
+              <a href="/assets/img/gallery/cair(1).jpeg" title="Cair 1" data-gallery="portfolio-gallery-product"
+                class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i
                   class="bi bi-link-45deg"></i></a> -->
             </div>
@@ -52,9 +51,8 @@
             <div class="portfolio-info">
               <h4>Semut 1</h4>
               <p>Lorem ipsum, dolor sit</p>
-              <a href="/assets/img/gallery/semut(1).jpeg" title="Semut 1"
-                data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                  class="bi bi-zoom-in"></i></a>
+              <a href="/assets/img/gallery/semut(1).jpeg" title="Semut 1" data-gallery="portfolio-gallery-branding"
+                class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i
                   class="bi bi-link-45deg"></i></a> -->
             </div>
@@ -65,8 +63,8 @@
             <div class="portfolio-info">
               <h4>Padat 2</h4>
               <p>Lorem ipsum, dolor sit</p>
-              <a href="/assets/img/gallery/padat(2).jpeg" title="Padat 2"
-                data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="/assets/img/gallery/padat(2).jpeg" title="Padat 2" data-gallery="portfolio-gallery-app"
+                class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i
                   class="bi bi-link-45deg"></i></a> -->
             </div>
@@ -77,9 +75,8 @@
             <div class="portfolio-info">
               <h4>Cair 2</h4>
               <p>Lorem ipsum, dolor sit</p>
-              <a href="/assets/img/gallery/cair(2).jpeg" title="Cair 2"
-                data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                  class="bi bi-zoom-in"></i></a>
+              <a href="/assets/img/gallery/cair(2).jpeg" title="Cair 2" data-gallery="portfolio-gallery-product"
+                class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i
                   class="bi bi-link-45deg"></i></a> -->
             </div>
@@ -90,9 +87,8 @@
             <div class="portfolio-info">
               <h4>Semut 2</h4>
               <p>Lorem ipsum, dolor sit</p>
-              <a href="/assets/img/gallery/semut(2).jpeg" title="Semut 2"
-                data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                  class="bi bi-zoom-in"></i></a>
+              <a href="/assets/img/gallery/semut(2).jpeg" title="Semut 2" data-gallery="portfolio-gallery-branding"
+                class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i
                   class="bi bi-link-45deg"></i></a> -->
             </div>
@@ -103,8 +99,8 @@
             <div class="portfolio-info">
               <h4>Padat 3</h4>
               <p>Lorem ipsum, dolor sit</p>
-              <a href="/assets/img/gallery/padat(3).jpeg" title="Padat 3"
-                data-gallery="portfolio-gallery-app" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+              <a href="/assets/img/gallery/padat(3).jpeg" title="Padat 3" data-gallery="portfolio-gallery-app"
+                class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i
                   class="bi bi-link-45deg"></i></a> -->
             </div>
@@ -115,9 +111,8 @@
             <div class="portfolio-info">
               <h4>Cair 3</h4>
               <p>Lorem ipsum, dolor sit</p>
-              <a href="/assets/img/gallery/cair(3).jpeg" title="Cair 3"
-                data-gallery="portfolio-gallery-product" class="glightbox preview-link"><i
-                  class="bi bi-zoom-in"></i></a>
+              <a href="/assets/img/gallery/cair(3).jpeg" title="Cair 3" data-gallery="portfolio-gallery-product"
+                class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i
                   class="bi bi-link-45deg"></i></a> -->
             </div>
@@ -128,9 +123,8 @@
             <div class="portfolio-info">
               <h4>Semut 3</h4>
               <p>Lorem ipsum, dolor sit</p>
-              <a href="/assets/img/gallery/semut(2).jpeg" title="Semut 2"
-                data-gallery="portfolio-gallery-branding" class="glightbox preview-link"><i
-                  class="bi bi-zoom-in"></i></a>
+              <a href="/assets/img/gallery/semut(2).jpeg" title="Semut 2" data-gallery="portfolio-gallery-branding"
+                class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               <!-- <a href="portfolio-details.html" title="More Details" class="details-link"><i
                   class="bi bi-link-45deg"></i></a> -->
             </div>
@@ -148,13 +142,26 @@
 <script>
 // import '../assets/vendor/purecounter/purecounter_vanilla.js';
 // import '../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js';
-import imagesLoaded from  'imagesloaded';
-import Isotope  from 'isotope-layout'
+import imagesLoaded from 'imagesloaded';
+import Isotope from 'isotope-layout';
+import { mapState, mapActions } from 'vuex';
+import { translations } from '@/translations/translations.js';
+
 
 // import '../assets/vendor/isotope-layout/isotope.pkgd.min.js';
 export default {
 
   name: 'Services',
+  data() {
+    return {
+      translations,
+    };
+  },
+  computed: {
+    ...mapState({
+      locale: state => state.locale, // Mengambil locale dari Vuex
+    }),
+  },
   mounted() {
 
     /**

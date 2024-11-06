@@ -11,7 +11,7 @@
                 <ul>
                     <li><a href="#hero" class="active">{{ translations.header[locale].home }}</a></li>
                     <li><a href="#about">{{ translations.header[locale].about }}</a></li>
-                    <li><a href="#features">{{ translations.header[locale].features }}</a></li>
+                    <li><a href="#poduct">{{ translations.header[locale].features }}</a></li>
                     <li><a href="#gallery">{{ translations.header[locale].services }}</a></li>
                     <!-- <li><a href="#pricing">{{ translations.header[locale].pricing }}</a></li>
                     <li class="dropdown">
@@ -58,7 +58,7 @@
 
 
 
-            <a class="btn-getstarted" href="#about">Get Started</a>
+            <a class="btn-getstarted" href="#about">Start Journey</a>
         </div>
     </header>
 </template>
