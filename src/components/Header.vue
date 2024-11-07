@@ -9,56 +9,38 @@
 
             <nav id="navmenu" class="navmenu">
                 <ul>
-                    <li><a href="#hero" class="active">{{ translations.header[locale].home }}</a></li>
-                    <li><a href="#about">{{ translations.header[locale].about }}</a></li>
-                    <li><a href="#poduct">{{ translations.header[locale].features }}</a></li>
-                    <li><a href="#gallery">{{ translations.header[locale].services }}</a></li>
-                    <!-- <li><a href="#pricing">{{ translations.header[locale].pricing }}</a></li>
-                    <li class="dropdown">
-                        <a href="#"><span>{{ translations.header[locale].dropdown }}</span> <i
-                                class="bi bi-chevron-down toggle-dropdown"></i></a>
-                        <ul>
-                            <li><a href="#">{{ translations.header[locale].dropdown1 }}</a></li>
-                        </ul>
-                    </li> -->
-                    <li><a href="#contact">{{ translations.header[locale].contact }}</a></li>
-
-
-                    <li class="d-flex">
-                        <ul class="nav nav-tabs">
-                            <li class="nav-item">
-                                <a class="nav-link" :class="{ active: isEnglish }" @click="setLanguage(true)"
-                                    style="padding: 10px 15px;">
-                                    <span class="fi fi-gb border"></span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" :class="{ active: !isEnglish }" @click="setLanguage(false)"
-                                    style="padding: 10px 15px;">
-                                    <span class="fi fi-id border"></span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <!-- <div class="language-toggle ms-3">
-                        <label class="switch">
-                            <input type="checkbox" @click="toggleLanguage" v-model="isEnglish">
-                            <span class="slider round"></span>
-                        </label>
-                        <span class="language-label">
-                            <span v-if="isEnglish" class="fi fi-gb"></span>
-                            <span v-else class="fi fi-id fis"></span> 
-                        </span>
-                        <span class="language-label">{{ isEnglish ? 'EN' : 'ID' }}</span>
-                    </div> -->
+                    <li><a href="#hero" :class="{ active: activeItem === 'home' }" @click="setActiveItem('home')">{{
+                        translations.header[locale].home }}</a></li>
+                    <li><a href="#about" :class="{ active: activeItem === 'about' }" @click="setActiveItem('about')">{{
+                        translations.header[locale].about }}</a></li>
+                    <li><a href="#poduct" :class="{ active: activeItem === 'features' }"
+                            @click="setActiveItem('features')">{{ translations.header[locale].features }}</a></li>
+                    <li><a href="#gallery" :class="{ active: activeItem === 'services' }"
+                            @click="setActiveItem('services')">{{ translations.header[locale].services }}</a></li>
+                    <li><a href="#contact" :class="{ active: activeItem === 'contact' }"
+                            @click="setActiveItem('contact')">{{ translations.header[locale].contact }}</a></li>
                 </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+                <i class="mobile-nav-toggle d-xl-none bi bi-x" @click="toggleMobileNav"></i>
             </nav>
 
 
-
-            <a class="btn-getstarted" href="#about">Start Journey</a>
+            <div class="d-flex btn-translation">
+                <ul class="nav nav-tabs">
+                    <li class="nav-item">
+                        <a class="nav-link" :class="{ active: isEnglish }" @click="setLanguage(true)"
+                            style="padding: 10px 15px;">
+                            <span class="fi fi-gb border"></span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" :class="{ active: !isEnglish }" @click="setLanguage(false)"
+                            style="padding: 10px 15px;">
+                            <span class="fi fi-id border"></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- <a class="btn-getstarted" href="#about">Start Journey</a> -->
         </div>
     </header>
 </template>
@@ -74,7 +56,8 @@ export default {
         return {
             translations,
             isEnglish: true, // Default ke bahasa Inggris
-            locale: 'en'
+            locale: 'en',
+            activeItem: 'home'
         };
     },
     computed: {
@@ -86,41 +69,27 @@ export default {
         ...mapActions(['changeLocale']),
         setLanguage(isEng) {
             this.isEnglish = isEng;
-            const newLocale =  this.isEnglish ? 'en' : 'id'; // Menentukan locale baru
+            const newLocale = this.isEnglish ? 'en' : 'id'; // Menentukan locale baru
             this.locale = newLocale;
             this.changeLocale(newLocale); // Memanggil aksi untuk mengubah locale
             console.log(`Berpindah ke Bahasa ${newLocale === 'en' ? 'Inggris' : 'Indonesia'}`);
         },
-        // changeLocale(locale) {
-        //     this.locale = locale;
-        //     console.log("this locale", this.locale)
-        //     // Tambahkan logika lain jika diperlukan, seperti menyimpan pilihan locale
-        // }
+        setActiveItem(item) {
+            this.activeItem = item;
+            // Menambahkan logika untuk mengubah kelas body dan ikon
+            document.body.classList.toggle('mobile-nav-active');
+            const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+            mobileNavToggleBtn.classList.toggle('bi-list');
+            mobileNavToggleBtn.classList.toggle('bi-x');
+        },
+        toggleMobileNav() {
+            // Logika untuk toggle mobile nav jika diperlukan
+            document.body.classList.toggle('mobile-nav-active');
+            const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+            mobileNavToggleBtn.classList.toggle('bi-list');
+            mobileNavToggleBtn.classList.toggle('bi-x');
+        }
     }
-    // methods: {
-    //     ...mapActions(['changeLocale']),
-    //     setLanguage(isEng) {
-    //         this.isEnglish = isEng;
-    //         // Tambahkan logika lain jika diperlukan, seperti menyimpan pilihan bahasa
-    //     },
-    //     toggleLanguage() {
-    //         const newLocale = this.locale === 'en' ? 'id' : 'en'; // Menentukan locale baru
-    //         this.changeLocale(newLocale); // Memanggil aksi untuk mengubah locale
-    //         console.log(`Berpindah ke Bahasa ${newLocale === 'en' ? 'Inggris' : 'Indonesia'}`);
-    //     },
-    // },
-    // methods: {
-    //     toggleLanguage() {
-    //         this.isEnglish = !this.isEnglish;
-    //         if (this.isEnglish) {
-    //             console.log("Berpindah ke Bahasa Inggris");
-    //             // Tambahkan logika untuk mengganti konten ke bahasa Inggris
-    //         } else {
-    //             console.log("Berpindah ke Bahasa Indonesia");
-    //             // Tambahkan logika untuk mengganti konten ke bahasa Indonesia
-    //         }
-    //     },
-    // },
 };
 </script>
 

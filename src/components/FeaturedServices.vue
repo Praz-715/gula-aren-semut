@@ -13,7 +13,7 @@
             </div>
             <h4 class="text-center mt-2"><a class="stretched-link">{{ service.title }}</a></h4>
           </div>
-          <div v-else-if="service.title === '100% Oraganic'" class="service-item d-flex flex-column align-items-center"
+          <div v-else-if="service.title === '100% Organic'" class="service-item d-flex flex-column align-items-center"
             @mouseover="showNature" @mouseout="hideNature">
             <div class="icon flex-shrink-0">
               <i class="img-container">
@@ -45,7 +45,7 @@ export default {
         { icon: "bi bi-stars", title: "Hygiene" },
         { icon: "bi bi-card-checklist", title: "Halal" },
         { icon: "bi bi-shield-check", title: "High Quality" },
-        { icon: "bi bi-shield-check", title: "100% Oraganic" },
+        { icon: "bi bi-shield-check", title: "100% Organic" },
       ],
     };
   },

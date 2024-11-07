@@ -16,7 +16,7 @@ export const translations = {
       home: "Beranda",
       about: "Tentang",
       features: "Produk",
-      services: "Galeri,",
+      services: "Galeri",
       pricing: "Harga",
       dropdown: "Dropdown",
       dropdown1: "Dropdown 1",

@@ -226,12 +226,24 @@ h6 {
   background: color-mix(in srgb, var(--accent-color), transparent 15%);
 }
 
+.header .btn-translation,
+.header .btn-translation:focus {
+  font-size: 12px;
+  margin: 0 0 0 30px;
+  transition: 0.3s;
+}
+
 @media (max-width: 1200px) {
   .header .logo {
     order: 1;
   }
 
   .header .btn-getstarted {
+    order: 2;
+    margin: 0 15px 0 0;
+    padding: 6px 15px;
+  }
+  .header .btn-translation {
     order: 2;
     margin: 0 15px 0 0;
     padding: 6px 15px;
