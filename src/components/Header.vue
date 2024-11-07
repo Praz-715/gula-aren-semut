@@ -20,7 +20,7 @@
                     <li><a href="#contact" :class="{ active: activeItem === 'contact' }"
                             @click="setActiveItem('contact')">{{ translations.header[locale].contact }}</a></li>
                 </ul>
-                <i class="mobile-nav-toggle d-xl-none bi bi-x" @click="toggleMobileNav"></i>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
             </nav>
 
 
