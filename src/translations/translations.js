@@ -42,25 +42,26 @@ export const translations = {
     en: {
       p1: "Who We Are",
       h3: "FNF, Producer of Palm Sugar",
-      desc: "Creating natural products with numerous benefits, including:",
+      desc: "Our Story",
+      story: "From Nature Future was founded with the mission to bring natural, high-quality palm sugar from Indonesia to the world. We are committed to supporting the well-being of local farmers and promoting healthy, natural products for global consumers.",
       benefit:
         [
-          "Rich in Nutrients: Palm sugar contains various essential vitamins and minerals for overall health",
-          "Low Glycemic Index: This sugar has a lower glycemic index compared to regular sugar, making it safer for consumption by diabetics",
-          "Delicious Natural Flavor: It provides a sweet, natural, and distinctive taste, making it an ideal choice for various dishes",
-          "Supports Digestive Health: Contains prebiotics that are beneficial for gut health."
+          "Supporting Local Farmers: Committed to empowering local farmers, preserving the environment, and supporting sustainability",
+          "Hygienic Production Process: Each stage, from sap collection and cooking to packaging, is conducted with strict hygiene control.",
+          "Halal Standards: Has met the standards of a trusted halal certification body.",
+          "100% Organic and High-Quality: Produced without chemicals or preservatives."
         ]
     },
     id: {
       p1: "Siapa Kami",
       h3: "FNF, Produsen Gula Aren Semut",
-      desc: "Membuat produk yang alami dengan banyak manfaat, antara lain:",
+      desc: "Asal Usul Kami",
+      story: "From Nature Future berdiri dengan tujuan menghadirkan gula aren alami dan berkualitas tinggi dari Indonesia ke seluruh dunia. Kami berkomitmen untuk mendukung kesejahteraan petani lokal, serta mempromosikan produk yang sehat dan alami untuk konsumen global.",
       benefit:
-        [
-          "Nutrisi yang Kaya: Gula aren semut mengandung berbagai vitamin dan mineral yang penting bagi kesehatan",
-          "Indeks Glikemik Rendah: Gula ini memiliki indeks glikemik yang lebih rendah dibandingkan dengan gula biasa, sehingga lebih aman untuk dikonsumsi oleh penderita diabetes",
-          "Rasa Alami yang Lezat: Memberikan rasa manis yang alami dan khas, menjadikannya pilihan ideal untuk berbagai hidangan",
-          "Mendukung Kesehatan Pencernaan: Mengandung prebiotik yang baik untuk kesehatan saluran pencernaan"
+        ["Memberdayakan Petani Lokal: Berkomitmen untuk memberdayakan petani lokal, menjaga lingkungan, dan mendukung keberlanjutan.",
+          "Proses Produksi Higienis: Setiap tahap, dari pengambilan nira, pemasakan, hingga pengemasan dilakukan dengan kontrol ketat terhadap kebersihan.",
+          "Standar Halal: Telah memenuhi standar dari lembaga halal terpercaya.",
+          "100% Organik dan Berkualitas Tinggi: Diproduksi tanpa bahan kimia atau pengawet."
         ]
     }
   },
@@ -91,32 +92,32 @@ export const translations = {
   },
   gallery: {
     en: {
-      title:"Gallery",
-      tabAll:"All",
-      tab1:"Block",
-      tab2:"Syrup",
-      tab3:"Crystal"
+      title: "Gallery",
+      tabAll: "All",
+      tab1: "Block",
+      tab2: "Syrup",
+      tab3: "Crystal"
     },
     id: {
-      title:"Galeri",
-      tabAll:"Semua",
-      tab1:"Cetak",
-      tab2:"Cair",
-      tab3:"Semut"
+      title: "Galeri",
+      tabAll: "Semua",
+      tab1: "Cetak",
+      tab2: "Cair",
+      tab3: "Semut"
     }
   },
   contact: {
     en: {
-      title:"Contact",
-      alamat:"Address",
-      callus:"Call Us",
-      emailus:"Email Us",
+      title: "Contact",
+      alamat: "Address",
+      callus: "Call Us",
+      emailus: "Email Us",
     },
     id: {
-      title:"Kontak",
-      alamat:"Alamat",
-      callus:"Hubungi Kami",
-      emailus:"Email",
+      title: "Kontak",
+      alamat: "Alamat",
+      callus: "Hubungi Kami",
+      emailus: "Email",
     }
   }
 };
