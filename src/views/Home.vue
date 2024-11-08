@@ -7,7 +7,7 @@
             <HeroSection />
             <FeaturedServices />
             <About />
-            <Clients />
+            <!-- <Clients /> -->
             <Features />
             <!-- <FeaturesDetails /> -->
             <Gallery />

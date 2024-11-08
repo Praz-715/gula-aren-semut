@@ -16,20 +16,24 @@
                         delay: 1000,
                         disableOnInteraction: false,
                     }" :breakpoints="{
-        '480': {
-            slidesPerView: 3,
-            spaceBetween: 10,
-        },
-        '640': {
-            slidesPerView: 5,
-            spaceBetween: 20,
-        },
+                        '320': {
+                            slidesPerView: 3,
+                            spaceBetween: 10,
+                        },
+                        '480': {
+                            slidesPerView: 3,
+                            spaceBetween: 10,
+                        },
+                        '640': {
+                            slidesPerView: 5,
+                            spaceBetween: 20,
+                        },
 
-        '1024': {
-            slidesPerView: 5,
-            spaceBetween: 50,
-        },
-    }">
+                        '1024': {
+                            slidesPerView: 5,
+                            spaceBetween: 50,
+                        },
+                    }">
                     <SwiperSlide class="swiper-slide client-logo" v-for="(client, index) in clients" :key="index">
                         <img :src="client.img" alt="" class="img-fluid">
                     </SwiperSlide>
