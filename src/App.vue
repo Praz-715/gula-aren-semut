@@ -37,7 +37,7 @@ import HelloWorld from './components/HelloWorld.vue'
 
 <script setup>
 import Home from "./views/Home.vue";
-import { useHead } from 'vue3-head';
+import { useHead } from '@unhead/vue'
 
 useHead({
   title: "Natural Sweetness For the Future",

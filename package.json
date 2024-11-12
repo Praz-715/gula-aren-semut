@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
+    "@vueuse/head": "^2.0.0",
     "aos": "^2.3.4",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
@@ -20,7 +21,6 @@
     "swiper": "^11.1.14",
     "vue": "^3.5.12",
     "vue-waypoint": "^4.3.0",
-    "vue3-head": "^1.0.4",
     "vuex": "^4.1.0"
   },
   "devDependencies": {
