@@ -17,10 +17,13 @@ import 'glightbox/dist/css/glightbox.min.css';
 // import 'swiper/css/navigation';
 // import 'swiper/css/pagination';
 import './style.css'
+import { createVue3Head } from 'vue3-head';
 
 const app = createApp(App);
+const head = createVue3Head()
 
 app.use(store); 
+app.use(head);
 
 app.use({
   install() {

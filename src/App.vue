@@ -35,19 +35,21 @@ import HelloWorld from './components/HelloWorld.vue'
   <Home />
 </template>
 
-<script>
+<script setup>
 import Home from "./views/Home.vue";
+import { useHead } from 'vue3-head';
 
-export default {
-  name: "App",
-  components: {
-    Home,
-  },
-
-};
+useHead({
+  title: "Natural Sweetness For the Future",
+  meta: [
+    { property: "og:title", content: "Natural Sweetness For the Future" },
+    { property: "og:description", content: "The finest natural quality in every grain of palm sugar" },
+    { property: "og:url", content: "https://gula-aren-semut.vercel.app" },
+    { property: "og:image", content: "https://gula-aren-semut.vercel.app/assets/img/why-us.jpeg" },
+  ]
+})
 </script>
 <style>
-
 body {
   font-family: 'Nunito', 'Inter', 'Roboto', sans-serif;
 }

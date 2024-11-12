@@ -20,6 +20,7 @@
     "swiper": "^11.1.14",
     "vue": "^3.5.12",
     "vue-waypoint": "^4.3.0",
+    "vue3-head": "^1.0.4",
     "vuex": "^4.1.0"
   },
   "devDependencies": {
